@@ -5,5 +5,5 @@ function saludar(){
     console.log("Hola");
 }
 setTimeout(saludar, 1000);
-console.log(screen.width);
-console.log(screen.height);
+console.log(screen.availHeight);
+console.log(screen.availWidth);

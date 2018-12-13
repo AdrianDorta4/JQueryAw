@@ -1,0 +1,12 @@
+.contenedor{
+    
+background: rgba(252,236,252,1);
+background: -moz-radial-gradient(center, ellipse cover, rgba(252,236,252,1) 0%, rgba(251,166,225,1) 37%, rgba(253,137,215,1) 51%, rgba(255,124,216,1) 100%);
+background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%, rgba(252,236,252,1)), color-stop(37%, rgba(251,166,225,1)), color-stop(51%, rgba(253,137,215,1)), color-stop(100%, rgba(255,124,216,1)));
+background: -webkit-radial-gradient(center, ellipse cover, rgba(252,236,252,1) 0%, rgba(251,166,225,1) 37%, rgba(253,137,215,1) 51%, rgba(255,124,216,1) 100%);
+background: -o-radial-gradient(center, ellipse cover, rgba(252,236,252,1) 0%, rgba(251,166,225,1) 37%, rgba(253,137,215,1) 51%, rgba(255,124,216,1) 100%);
+background: -ms-radial-gradient(center, ellipse cover, rgba(252,236,252,1) 0%, rgba(251,166,225,1) 37%, rgba(253,137,215,1) 51%, rgba(255,124,216,1) 100%);
+background: radial-gradient(ellipse at center, rgba(252,236,252,1) 0%, rgba(251,166,225,1) 37%, rgba(253,137,215,1) 51%, rgba(255,124,216,1) 100%);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fcecfc', endColorstr='#ff7cd8', GradientType=1 );
+
+}

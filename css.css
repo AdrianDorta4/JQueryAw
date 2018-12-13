@@ -1,12 +1,67 @@
-.contenedor{
-    
-background: rgba(252,236,252,1);
-background: -moz-radial-gradient(center, ellipse cover, rgba(252,236,252,1) 0%, rgba(251,166,225,1) 37%, rgba(253,137,215,1) 51%, rgba(255,124,216,1) 100%);
-background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%, rgba(252,236,252,1)), color-stop(37%, rgba(251,166,225,1)), color-stop(51%, rgba(253,137,215,1)), color-stop(100%, rgba(255,124,216,1)));
-background: -webkit-radial-gradient(center, ellipse cover, rgba(252,236,252,1) 0%, rgba(251,166,225,1) 37%, rgba(253,137,215,1) 51%, rgba(255,124,216,1) 100%);
-background: -o-radial-gradient(center, ellipse cover, rgba(252,236,252,1) 0%, rgba(251,166,225,1) 37%, rgba(253,137,215,1) 51%, rgba(255,124,216,1) 100%);
-background: -ms-radial-gradient(center, ellipse cover, rgba(252,236,252,1) 0%, rgba(251,166,225,1) 37%, rgba(253,137,215,1) 51%, rgba(255,124,216,1) 100%);
-background: radial-gradient(ellipse at center, rgba(252,236,252,1) 0%, rgba(251,166,225,1) 37%, rgba(253,137,215,1) 51%, rgba(255,124,216,1) 100%);
-filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fcecfc', endColorstr='#ff7cd8', GradientType=1 );
+*{
+    margin:0px;
+    padding:0px;
+}
 
+
+
+body{
+
+    background: rgba(210,255,82,1);
+    background: -moz-linear-gradient(top, rgba(210,255,82,1) 0%, rgba(145,232,66,1) 100%);
+    background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(210,255,82,1)), color-stop(100%, rgba(145,232,66,1)));
+    background: -webkit-linear-gradient(top, rgba(210,255,82,1) 0%, rgba(145,232,66,1) 100%);
+    background: -o-linear-gradient(top, rgba(210,255,82,1) 0%, rgba(145,232,66,1) 100%);
+    background: -ms-linear-gradient(top, rgba(210,255,82,1) 0%, rgba(145,232,66,1) 100%);
+    background: linear-gradient(to bottom, rgba(210,255,82,1) 0%, rgba(145,232,66,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#d2ff52', endColorstr='#91e842', GradientType=0 );
+    
+
+    height:604px;
+    width:1346px;    
+
+}
+.arriba{    
+    display: flex;
+    flex-direction: row;
+    margin-left:100px;
+    margin-top:50px;
+}
+.boton{
+    border-radius: 10px 10px 10px 10px;
+    -moz-border-radius: 10px 10px 10px 10px;
+    -webkit-border-radius: 10px 10px 10px 10px;
+    border: 0px solid #000000;
+    -webkit-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+-moz-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+    flex-direction: row;
+    width:100px;
+    height:100px;
+}
+.dificultades{
+    margin-top:20px;
+    margin-left:20px;
+    font-size: 20px;    
+}
+.Clicks{
+    text-shadow: 2px 0 0 #000, -2px 0 0 #000, 0 2px 0 #000, 0 -2px 0 #000, 1px 1px #000, -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000;
+    margin-left:200px;
+    color:rgb(255, 255, 255);
+    font-size:50px;
+    margin-top:10px;    
+}
+.ContenedorCartas{
+    background-color:black;
+    margin-left:200px;
+    width:960px;
+    display:grid;
+    grid-template-columns: auto auto auto auto auto auto;
+    grid-template-rows: auto auto;
+    grid-gap:10px;
+    height:420px;
+    margin-top:60px;
+}
+.grid-item{
+    color:white;
 }

@@ -94,7 +94,7 @@ $(function () {
                     }
                     marcado.id = null;
                     marcado.valor = "";
-                }, 1000);
+                }, 700);
             }
             //alert(valor);
         }

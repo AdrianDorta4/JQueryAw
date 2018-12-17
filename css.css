@@ -1,0 +1,36 @@
+body{
+    padding: 0;
+    margin: 0;
+    background-color: pink;
+}
+.top{
+    display: flex;
+    flex-direction: row;
+    margin-top: 15px;
+    margin-left: 15px;
+}
+.top div{
+    padding: 7px;
+}
+.dificultad{
+    display: flex;
+    flex-direction: column;
+}
+.dificultad div {
+    padding: 5px;
+}
+#botonIniciar{
+    border-style: none;
+    background-color: white;
+    height: 50px;
+    width: 70px;
+    align-self: center;
+    margin-top: 70px;
+}
+h3{
+    padding: 0px;
+}
+ul{
+    list-style:none;
+    margin-left: 5px;
+}

@@ -2,46 +2,57 @@
 <html>
 
 <head>
-    <title>Javascript integrado en la pagina Web</title>
+    <title>Javascript integrado en la página Web</title>
     <meta charset="utf-8">
-    <script src="js.js"></script>
-    <link rel="stylesheet" href="css.css">
+    <script src="jquery-3.3.1.min.js"></script>
+    <script src="myscript.js"></script>
+    <link rel="stylesheet" type="text/css" href="css.css" media="screen" />
+
 </head>
 
 <body>
-    <div class="contenedor">
-        <div class="arriba">
-            <div class="boton">
-                <button type="button" class="boton"> Iniciar</button>
-            </div>
-            <div class="dificultades">
-                <form action="">
-                    <input type="radio" name="gender" value="Facil"> Facil<br>
-                    <input type="radio" name="gender" value="Intermedio"> Intermedio<br>
-                    <input type="radio" name="gender" value="Dificil"> Dificil
-                </form>
-            </div>
-            <div class="Clicks">
-                Clicks
-            </div>
-            <div class="ParejasHechas">
-                <!--Aqui iran las parejas una vez se hayan hecho-->
-            </div>
+    <div class="top">
+        <div class="boton" id="iniciar">
+
+            <button type="submit" id="botonIniciar">Iniciar</button>
+
         </div>
-        <div class="ContenedorCartas">
-            <!--150PX POR CARTA + 10 PX DE PADDING DE LOS LATERALES-->
-            <!--TIENE 42O DE ALTO POR TANTO SERIAN 200 POR LARGO DE CARTA +10PX DE PADDING POR CADA UNA -->
-                    <div class="grid-item">1</div>
-                    <div class="grid-item">2</div>
-                    <div class="grid-item">3</div>
-                    <div class="grid-item">4</div>
-                    <div class="grid-item">5</div>
-                    <div class="grid-item">6</div>
-                    <div class="grid-item">7</div>
-                    <div class="grid-item">8</div>
-                    <div class="grid-item">9</div>
-                
+        <div class="dificultad">
+            <label for="dificultad"><h3>Dificultad:</h3></label>
+            <div class="facil">
+                <input type="radio" name="dificultad" id="facil">
+                <label>FACIL</label>
+            </div>
+            <div class="medio">
+                <input type="radio" name="dificultad" id="medio">
+                <label>MEDIO</label>
+            </div>
+            <div class="medio">
+                <input type="radio" name="dificultad" id="dificil">
+                <label>DIFICIL</label>
+            </div>
+
+
+
         </div>
+        <div class="clicks">
+            
+        </div>
+        <div class="objetosEncontrados">
+            <ul id="encontrados">
+
+            </ul>
+        </div>
+
+
+    </div>
+    <div class="tablero">
+
+        <ul id="cartas">
+
+        </ul>
+
+
     </div>
 </body>
 

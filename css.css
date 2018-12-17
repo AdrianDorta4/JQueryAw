@@ -1,3 +1,4 @@
+
 *{
     margin:0px;
     padding:0px;
@@ -5,7 +6,7 @@
 
 
 
-body{
+/*body{
 
     background: rgba(210,255,82,1);
     background: -moz-linear-gradient(top, rgba(210,255,82,1) 0%, rgba(145,232,66,1) 100%);
@@ -20,48 +21,38 @@ body{
     height:604px;
     width:1346px;    
 
+}*/
+body{
+    background-color: pink;
 }
-.arriba{    
+.top{
     display: flex;
     flex-direction: row;
-    margin-left:100px;
-    margin-top:50px;
+    margin-top: 15px;
+    margin-left: 15px;
 }
-.boton{
-    border-radius: 10px 10px 10px 10px;
-    -moz-border-radius: 10px 10px 10px 10px;
-    -webkit-border-radius: 10px 10px 10px 10px;
-    border: 0px solid #000000;
-    -webkit-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
--moz-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
-    flex-direction: row;
-    width:100px;
-    height:100px;
+.top div{
+    padding: 7px;
 }
-.dificultades{
-    margin-top:20px;
-    margin-left:20px;
-    font-size: 20px;    
+.dificultad{
+    display: flex;
+    flex-direction: column;
 }
-.Clicks{
-    text-shadow: 2px 0 0 #000, -2px 0 0 #000, 0 2px 0 #000, 0 -2px 0 #000, 1px 1px #000, -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000;
-    margin-left:200px;
-    color:rgb(255, 255, 255);
-    font-size:50px;
-    margin-top:10px;    
+.dificultad div {
+    padding: 5px;
 }
-.ContenedorCartas{
-    background-color:black;
-    margin-left:200px;
-    width:960px;
-    display:grid;
-    grid-template-columns: auto auto auto auto auto auto;
-    grid-template-rows: auto auto;
-    grid-gap:10px;
-    height:420px;
-    margin-top:60px;
+#botonIniciar{
+    border-style: none;
+    background-color: white;
+    height: 50px;
+    width: 70px;
+    align-self: center;
+    margin-top: 70px;
 }
-.grid-item{
-    color:white;
+h3{
+    padding: 0px;
+}
+ul{
+    list-style:none;
+    margin-left: 5px;
 }

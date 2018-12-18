@@ -19,7 +19,6 @@ body{
 
     height:604px;
     width:1346px;    
-
 }
 .arriba{    
     display: flex;
@@ -64,4 +63,8 @@ box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
 }
 .grid-item{
     color:white;
+}
+.contenedor{
+    height:604px;
+    width:1346px;    
 }

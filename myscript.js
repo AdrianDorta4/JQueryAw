@@ -19,6 +19,7 @@ $(function () {
 
     $("#botonIniciar").on("click", function () {
         $(".carta").remove();
+        $("li").remove();
         if ($("#facil").prop("checked")) {
             colocarCartas(map_facil, 12);
             $("#cartas").css("display", "grid")

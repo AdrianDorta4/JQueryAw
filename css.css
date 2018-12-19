@@ -1,20 +1,34 @@
 *{
     padding: 0;
     margin:0;
+    
 }
+
 body{
     padding: 0;
     margin: 0;
-    background-color: pink;
+    background-image: url("fondo.jpg");
+    width:100%;
+    height:100%;
+    background-size:100%;
+    
 }
 .top{
     display: flex;
     flex-direction: row;
+    margin:auto;
     margin-top: 15px;
-    margin-left: 15px;
+    width: 800px;
+    background-color: green;
+    border-radius: 2%;
+    
 }
-.top div{
+.botones, .clicks{
     padding: 7px;
+    font-weight: bold;
+    color: white;
+    font-size: 20px;
+    text-shadow: 1px;
 }
 .dificultad{
     display: flex;
@@ -26,15 +40,28 @@ body{
 #botonIniciar{
     border-style: none;
     background-color: white;
-    height: 50px;
-    width: 70px;
-    align-self: center;
-    margin-top: 70px;
+    height: 30px;
+    width: 40px;
+    margin:auto;
+    border-radius: 30%;
+}
+.tablero{
+    margin: auto;
+    margin-left: 30px;
+    margin-top: 15px;
+    
+}
+.clicks{
+    margin-top: 65px;
+    margin-left: 20px;
 }
 h3{
     padding: 0px;
 }
 ul{
     list-style:none;
+    margin-left: 5px;
+}
+.encontrados li{
     margin-left: 5px;
 }

@@ -46,7 +46,7 @@ $(function () {
                 .css("grid-template-columns", "50px 50px 50px 50px 50px ");
             dificultad = 2;
         }
-            clicks = 0;
+        clicks = 0;
     });
 
 
@@ -55,7 +55,7 @@ $(function () {
     })
 
     $("#cartas").on("click", "li", function (event) {
-        clicks++;
+
         let tablero;
         if (dificultad == 0) {
             tablero = new Map(map_facil);
@@ -71,6 +71,8 @@ $(function () {
         console.log($(event.target));
         if ($(event.target).prop("id")) {
             if (marcado.id == null) {
+                clicks++;
+                $("#clicks").text(clicks + "Clicks");
                 marcado.id = $(event.target).prop("id");
                 marcado.foto = $(event.target).prop("name");
                 $("#" + id).prop("src", tablero.get(parseInt(id)).imagen_front);
@@ -78,34 +80,43 @@ $(function () {
             else {
                 $("#" + id).prop("src", tablero.get(parseInt(id)).imagen_front);
                 setTimeout(function () {
-                    if (marcado.id.split("_")[0] === $(event.target).prop("id").split("_")[0]) {
-                        if (marcado.foto == "uno" && $(event.target).prop("name") == "dos" ||
-                            marcado.foto == "dos" && $(event.target).prop("name") == "uno") {
-                            $("#" + id).css("visibility", "hidden");
-                            $("#" + marcado.id).css("visibility", "hidden");
-                            let nuevoElemento = $("<li>" +
-                                "<img src=" + tablero.get(parseInt(marcado.id.split("_")[0])).imagen_front +
-                                " height=50 width= 50 class=carta>" + "</li>");
-                            $("#encontrados").append(nuevoElemento);
-                       
-                           
+                    if (marcado.id.split("_")[0] === $(event.target).prop("id").split("_")[0] &&
+                        (marcado.foto == "uno" && $(event.target).prop("name") == "uno" ||
+                            marcado.foto == "dos" && $(event.target).prop("name") == "dos")) {
+                        alert("es la misma carta");
+                        $("#clicks").text(clicks + "Clicks");
+                    }
+                    else {
+                        clicks++;
+                        $("#clicks").text(clicks + "Clicks");
+                        if (marcado.id.split("_")[0] === $(event.target).prop("id").split("_")[0]) {
+                            if (marcado.foto == "uno" && $(event.target).prop("name") == "dos" ||
+                                marcado.foto == "dos" && $(event.target).prop("name") == "uno") {
+                                $("#" + id).css("visibility", "hidden");
+                                $("#" + marcado.id).css("visibility", "hidden");
+                                let nuevoElemento = $("<li>" +
+                                    "<img src=" + tablero.get(parseInt(marcado.id.split("_")[0])).imagen_front +
+                                    " height=50 width= 50 class=carta>" + "</li>");
+                                $("#encontrados").append(nuevoElemento);
+
+                            }
+                            else {
+                                $("#" + id).prop("src", tablero.get(parseInt(id)).imagen_back);
+                                $("#" + marcado.id).prop("src", tablero.get(parseInt(id)).imagen_back);
+                            }
+
                         }
                         else {
                             $("#" + id).prop("src", tablero.get(parseInt(id)).imagen_back);
                             $("#" + marcado.id).prop("src", tablero.get(parseInt(id)).imagen_back);
-                           
-                            
-                        }
 
-                    }
-                    else {
-                        $("#" + id).prop("src", tablero.get(parseInt(id)).imagen_back);
-                        $("#" + marcado.id).prop("src", tablero.get(parseInt(id)).imagen_back);
-                     
-                    
-                    }
+
+                        }
+                        
                     marcado.id = null;
                     marcado.valor = "";
+                    }
+
                 }, 700);
             }
             //alert(valor);
@@ -119,7 +130,7 @@ function colocarCartas(mapa, max) {
     let mapa_aux = new Map(mapa);
     let colocados = 0;
     let usados = new Map();
-   // @mianrojasgomez
+    // @mianrojasgomez
 
     while (colocados < max) {
         let random = Math.floor((Math.random() * mapa_aux.size));

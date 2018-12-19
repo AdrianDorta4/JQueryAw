@@ -18,6 +18,7 @@ $(function () {
     let yaContestados;
 
     $("#botonIniciar").on("click", function () {
+        $(".carta").remove();
         if ($("#facil").prop("checked")) {
             colocarCartas(map_facil, 12);
             $("#cartas").css("display", "grid")
@@ -79,7 +80,7 @@ $(function () {
                             $("#" + marcado.id).css("visibility", "hidden");
                             let nuevoElemento = $("<li>" +
                                 "<img src=" + tablero.get(parseInt(marcado.id.split("_")[0])).imagen_front +
-                                " height=50 width= 50>" + "</li>");
+                                " height=50 width= 50 class=carta>" + "</li>");
                             $("#encontrados").append(nuevoElemento);
                         }
                         else {
@@ -114,7 +115,7 @@ function colocarCartas(mapa, max) {
             //no hay ninguna carta todavía
             let nuevoElemento = $("<li class= " + mapa_aux.get(random).id + ">" +
                 "<img src=" + mapa_aux.get(random).imagen_back + " name= uno " +
-                " id= " + random + "_UNO height=120 width= 120>" + "</li>");
+                " id= " + random + "_UNO height=120 width= 120 class=carta>" + "</li>");
             $("#cartas").append(nuevoElemento);
             usados.set(random, 1);
             colocados += 1;
@@ -123,7 +124,7 @@ function colocarCartas(mapa, max) {
             //ya hay una carta
             let nuevoElemento = $("<li class= " + mapa_aux.get(random).id + ">" +
                 "<img src=" + mapa_aux.get(random).imagen_back + " name= dos " +
-                " id= " + random + "_DOS height=120 width= 120>" + "</li>");
+                " id= " + random + "_DOS height=120 width= 120 class=carta>" + "</li>");
             $("#cartas").append(nuevoElemento);
             usados.set(random, 2);
             colocados += 1;

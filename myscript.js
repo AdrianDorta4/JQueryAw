@@ -14,9 +14,9 @@ $(function () {
         id: null,
         foto: ""
     };
+    let clicks;
     let dificultad = 0; //0 -> facil 1 -> medio 2 -> dificil
     let yaContestados;
-    
 
     $("#botonIniciar").on("click", function () {
         if ($("#facil").prop("checked")) {
@@ -25,7 +25,6 @@ $(function () {
                 .css("grid-template-columns", "200px 200px 200px 200px 200px 200px");
             $("#encontrados").css("display", "grid")
                 .css("grid-template-columns", "50px 50px 50px");
-                
 
         }
         else if ($("#medio").prop("checked")) {
@@ -45,19 +44,17 @@ $(function () {
                 .css("grid-template-columns", "50px 50px 50px 50px 50px ");
             dificultad = 2;
         }
-        clicks =0;
-
+            clicks = 0;
     });
+
 
     $("img").on("click", function (event) {
         alert("hola");
     })
 
     $("#cartas").on("click", "li", function (event) {
-        let tablero;
         clicks++;
-       let numclicks = $( clicks + " Clicks");
-        $("#clicks").append(numclicks);
+        let tablero;
         if (dificultad == 0) {
             tablero = new Map(map_facil);
         }
@@ -67,6 +64,7 @@ $(function () {
         else {
             tablero = new Map(map_dificil);
         }
+        $("#clicks").text(clicks + "Clicks");
         let id = $(event.target).prop("id");
         console.log($(event.target));
         if ($(event.target).prop("id")) {
@@ -87,16 +85,22 @@ $(function () {
                                 "<img src=" + tablero.get(parseInt(marcado.id.split("_")[0])).imagen_front +
                                 " height=50 width= 50>" + "</li>");
                             $("#encontrados").append(nuevoElemento);
+                       
+                           
                         }
                         else {
                             $("#" + id).prop("src", tablero.get(parseInt(id)).imagen_back);
                             $("#" + marcado.id).prop("src", tablero.get(parseInt(id)).imagen_back);
+                           
+                            
                         }
 
                     }
                     else {
                         $("#" + id).prop("src", tablero.get(parseInt(id)).imagen_back);
                         $("#" + marcado.id).prop("src", tablero.get(parseInt(id)).imagen_back);
+                     
+                    
                     }
                     marcado.id = null;
                     marcado.valor = "";
@@ -113,6 +117,7 @@ function colocarCartas(mapa, max) {
     let mapa_aux = new Map(mapa);
     let colocados = 0;
     let usados = new Map();
+   // @mianrojasgomez
 
     while (colocados < max) {
         let random = Math.floor((Math.random() * mapa_aux.size));
@@ -235,5 +240,4 @@ function inicializarMapaDificil(map) {
         imagen_back: "imagenes/carta.jpg",
         imagen_front: "imagenes/oso.jpg"
     });
-
 }

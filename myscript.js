@@ -66,13 +66,13 @@ $(function () {
         else {
             tablero = new Map(map_dificil);
         }
-        $("#clicks").text(clicks + "Clicks");
+        $("#clicks").text(clicks + " Clicks");
         let id = $(event.target).prop("id");
         console.log($(event.target));
         if ($(event.target).prop("id")) {
             if (marcado.id == null) {
                 clicks++;
-                $("#clicks").text(clicks + "Clicks");
+                $("#clicks").text(clicks + " Clicks");
                 marcado.id = $(event.target).prop("id");
                 marcado.foto = $(event.target).prop("name");
                 $("#" + id).prop("src", tablero.get(parseInt(id)).imagen_front);
@@ -83,12 +83,12 @@ $(function () {
                     if (marcado.id.split("_")[0] === $(event.target).prop("id").split("_")[0] &&
                         (marcado.foto == "uno" && $(event.target).prop("name") == "uno" ||
                             marcado.foto == "dos" && $(event.target).prop("name") == "dos")) {
-                        alert("es la misma carta");
-                        $("#clicks").text(clicks + "Clicks");
+                        alert("Has pulsado la misma carta dos veces");
+                        $("#clicks").text(clicks + " Clicks");
                     }
                     else {
                         clicks++;
-                        $("#clicks").text(clicks + "Clicks");
+                        $("#clicks").text(clicks + " Clicks");
                         if (marcado.id.split("_")[0] === $(event.target).prop("id").split("_")[0]) {
                             if (marcado.foto == "uno" && $(event.target).prop("name") == "dos" ||
                                 marcado.foto == "dos" && $(event.target).prop("name") == "uno") {
@@ -117,7 +117,7 @@ $(function () {
                     marcado.valor = "";
                     }
 
-                }, 700);
+                }, 600);
             }
             //alert(valor);
         }
@@ -130,7 +130,6 @@ function colocarCartas(mapa, max) {
     let mapa_aux = new Map(mapa);
     let colocados = 0;
     let usados = new Map();
-    // @mianrojasgomez
 
     while (colocados < max) {
         let random = Math.floor((Math.random() * mapa_aux.size));
